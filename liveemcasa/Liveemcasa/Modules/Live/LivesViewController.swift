@@ -18,9 +18,9 @@ final class LivesViewController: UIViewController {
   private let columnLayout = ColumnFlowLayout(
     cellsPerRow: 2,
     height: 250,
-    minimumInteritemSpacing: 12,
-    minimumLineSpacing: 12,
-    sectionInset: UIEdgeInsets(top: 12, left: 12, bottom: 12, right: 12)
+    minimumInteritemSpacing: 8,
+    minimumLineSpacing: 8,
+    sectionInset: UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
   )
   
   // MARK: - Public properties

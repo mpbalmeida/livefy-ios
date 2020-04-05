@@ -11,6 +11,7 @@ import SDWebImage
 
 class LivesCollectionViewCell: UICollectionViewCell {
   
+  @IBOutlet weak var viewContent: UIView!
   @IBOutlet weak var lblDate: UILabel!
   @IBOutlet weak var imgLive: UIImageView!
   
@@ -25,6 +26,9 @@ class LivesCollectionViewCell: UICollectionViewCell {
   }
   
   public func configureCell(live: Live) {
+    viewContent.layer.cornerRadius = 10;
+    viewContent.layer.masksToBounds = true;
+    
     imgLive.sd_setImage(with: URL(string: live.bands[0].bucketFile.preSignedUrl))
     
     if let date = live.date.date(withFormat: "yyyy-MM-dd'T'HH:mm:ssZ") {
