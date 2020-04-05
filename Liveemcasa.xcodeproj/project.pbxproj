@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		325DDE17D27AEA7833BF952B /* Pods_Liveemcasa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3709ED7BC91D634AC9242789 /* Pods_Liveemcasa.framework */; };
+		512A2424243A408A0058F6E9 /* LivesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512A2422243A408A0058F6E9 /* LivesCollectionViewCell.swift */; };
+		512A2425243A408A0058F6E9 /* LivesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 512A2423243A408A0058F6E9 /* LivesCollectionViewCell.xib */; };
+		512A2427243A49980058F6E9 /* ColumnFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512A2426243A49980058F6E9 /* ColumnFlowLayout.swift */; };
+		512A2429243A52710058F6E9 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512A2428243A52710058F6E9 /* String.swift */; };
+		512A242B243A533D0058F6E9 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512A242A243A533D0058F6E9 /* Date.swift */; };
 		51DB22E0243953D000274758 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DB22DF243953D000274758 /* AppDelegate.swift */; };
 		51DB22E2243953D000274758 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DB22E1243953D000274758 /* SceneDelegate.swift */; };
 		51DB22E9243953D100274758 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51DB22E8243953D100274758 /* Assets.xcassets */; };
@@ -30,8 +35,6 @@
 		51DB2333243965B600274758 /* CustomErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DB2332243965B600274758 /* CustomErrors.swift */; };
 		51DB2335243965FB00274758 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DB2334243965FB00274758 /* Constants.swift */; };
 		51DB2337243A0D6A00274758 /* LiveResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DB2336243A0D6A00274758 /* LiveResponse.swift */; };
-		51DB233C243A147600274758 /* LivesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DB233A243A147500274758 /* LivesTableViewCell.swift */; };
-		51DB233D243A147600274758 /* LivesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51DB233B243A147500274758 /* LivesTableViewCell.xib */; };
 		51DB2340243A1C0D00274758 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DB233F243A1C0D00274758 /* UIView.swift */; };
 		51DB2342243A1C5A00274758 /* TypeName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DB2341243A1C5A00274758 /* TypeName.swift */; };
 /* End PBXBuildFile section */
@@ -55,6 +58,11 @@
 
 /* Begin PBXFileReference section */
 		3709ED7BC91D634AC9242789 /* Pods_Liveemcasa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Liveemcasa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		512A2422243A408A0058F6E9 /* LivesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivesCollectionViewCell.swift; sourceTree = "<group>"; };
+		512A2423243A408A0058F6E9 /* LivesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LivesCollectionViewCell.xib; sourceTree = "<group>"; };
+		512A2426243A49980058F6E9 /* ColumnFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnFlowLayout.swift; sourceTree = "<group>"; };
+		512A2428243A52710058F6E9 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		512A242A243A533D0058F6E9 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		51DB22DC243953D000274758 /* Liveemcasa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Liveemcasa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51DB22DF243953D000274758 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51DB22E1243953D000274758 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,8 +91,6 @@
 		51DB2332243965B600274758 /* CustomErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomErrors.swift; sourceTree = "<group>"; };
 		51DB2334243965FB00274758 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		51DB2336243A0D6A00274758 /* LiveResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveResponse.swift; sourceTree = "<group>"; };
-		51DB233A243A147500274758 /* LivesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivesTableViewCell.swift; sourceTree = "<group>"; };
-		51DB233B243A147500274758 /* LivesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LivesTableViewCell.xib; sourceTree = "<group>"; };
 		51DB233F243A1C0D00274758 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		51DB2341243A1C5A00274758 /* TypeName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeName.swift; sourceTree = "<group>"; };
 		6A452B5CE2AB620B8FBCFBE5 /* Pods-Liveemcasa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Liveemcasa.debug.xcconfig"; path = "Target Support Files/Pods-Liveemcasa/Pods-Liveemcasa.debug.xcconfig"; sourceTree = "<group>"; };
@@ -270,8 +276,8 @@
 		51DB2339243A142500274758 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				51DB233A243A147500274758 /* LivesTableViewCell.swift */,
-				51DB233B243A147500274758 /* LivesTableViewCell.xib */,
+				512A2422243A408A0058F6E9 /* LivesCollectionViewCell.swift */,
+				512A2423243A408A0058F6E9 /* LivesCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -281,6 +287,9 @@
 			children = (
 				51DB233F243A1C0D00274758 /* UIView.swift */,
 				51DB2341243A1C5A00274758 /* TypeName.swift */,
+				512A2426243A49980058F6E9 /* ColumnFlowLayout.swift */,
+				512A2428243A52710058F6E9 /* String.swift */,
+				512A242A243A533D0058F6E9 /* Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -409,8 +418,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				51DB22EC243953D100274758 /* LaunchScreen.storyboard in Resources */,
-				51DB233D243A147600274758 /* LivesTableViewCell.xib in Resources */,
 				51DB22E9243953D100274758 /* Assets.xcassets in Resources */,
+				512A2425243A408A0058F6E9 /* LivesCollectionViewCell.xib in Resources */,
 				51DB232C24395AAD00274758 /* LivesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,7 +487,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				512A242B243A533D0058F6E9 /* Date.swift in Sources */,
 				51DB23192439552400274758 /* ViewInterface.swift in Sources */,
+				512A2427243A49980058F6E9 /* ColumnFlowLayout.swift in Sources */,
 				51DB2333243965B600274758 /* CustomErrors.swift in Sources */,
 				51DB232924395AAD00274758 /* LivesPresenter.swift in Sources */,
 				51DB231D2439555200274758 /* InteractorInterface.swift in Sources */,
@@ -489,10 +500,11 @@
 				51DB2335243965FB00274758 /* Constants.swift in Sources */,
 				51DB231F2439570400274758 /* Live.swift in Sources */,
 				51DB23212439585400274758 /* Band.swift in Sources */,
-				51DB233C243A147600274758 /* LivesTableViewCell.swift in Sources */,
+				512A2429243A52710058F6E9 /* String.swift in Sources */,
 				51DB2342243A1C5A00274758 /* TypeName.swift in Sources */,
 				51DB232824395AAD00274758 /* LivesInterfaces.swift in Sources */,
 				51DB2340243A1C0D00274758 /* UIView.swift in Sources */,
+				512A2424243A408A0058F6E9 /* LivesCollectionViewCell.swift in Sources */,
 				51DB232B24395AAD00274758 /* LivesInteractor.swift in Sources */,
 				51DB22E2243953D000274758 /* SceneDelegate.swift in Sources */,
 				51DB232D24395AAD00274758 /* LivesWireframe.swift in Sources */,

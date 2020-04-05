@@ -8,5 +8,6 @@ use_frameworks!
 
 pod 'Moya/RxSwift', '~> 14.0'
 pod 'Moya-ModelMapper', '~> 10.0'
+pod 'SDWebImage', '~> 5.0'
 
 end

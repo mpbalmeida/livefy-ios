@@ -18,7 +18,7 @@ final class LivesPresenter {
   private let interactor: LivesInteractor
   
   private var list = [Live]()
-  static let cellIdentifier = "liveCell"
+  static let cellIdentifier = "LivesCollectionViewCell"
   
   private enum Strings {
     static let title = "Lives"
@@ -56,32 +56,16 @@ extension LivesPresenter: LivesPresenterInterface {
     self.interactor.getLives()
   }
   
-  func cellForRowAt(index: IndexPath, tableView: UITableView) -> UITableViewCell {
-    guard let cell = tableView.dequeueReusableCell(withIdentifier: LivesPresenter.cellIdentifier, for: index) as? LivesTableViewCell
-      else {
-        return UITableViewCell()
-    }
+  func numberOfItems() -> Int {
+    return  list.count
+  }
+  
+  func cell(for collectionView: UICollectionView, at index: IndexPath) -> UICollectionViewCell {
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LivesCollectionViewCell.identifier, for: index) as? LivesCollectionViewCell
+   
+    cell?.configureCell(live: list[index.row])
     
-    cell.selectionStyle = .none
-    cell.configCell(live: self.list[index.row])
-    
-    return cell
-  }
-  
-  func numberOfRowsInSection(section: Int) -> Int {
-    return list.count
-  }
-  
-  func numberOfSections() -> Int {
-    return 1
-  }
-  
-  func heightForRowAt(index: IndexPath, tableView: UITableView) -> CGFloat {
-    return 200.0
-  }
-  
-  func didSelectRowAt(index: IndexPath) {
-    
+    return cell ?? UICollectionViewCell()
   }
 }
 
@@ -93,7 +77,5 @@ extension LivesPresenter: GetLivesInteractorProtocol {
   func getLivesError(error: Error) {
     
   }
-  
-  
 }
 

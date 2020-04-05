@@ -25,12 +25,9 @@ protocol LivesPresenterInterface: PresenterInterface {
   func getTitle() -> String
   func viewConfiguration()
   
-  // TableView
-  func cellForRowAt(index: IndexPath, tableView: UITableView) -> UITableViewCell
-  func numberOfRowsInSection(section: Int) -> Int
-  func numberOfSections() -> Int
-  func heightForRowAt(index: IndexPath, tableView: UITableView ) -> CGFloat
-  func didSelectRowAt(index: IndexPath)
+  // CollectionView
+  func numberOfItems() -> Int
+  func cell(for collectionView: UICollectionView, at index: IndexPath) -> UICollectionViewCell
   
 }
 

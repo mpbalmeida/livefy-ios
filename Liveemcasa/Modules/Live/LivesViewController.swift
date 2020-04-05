@@ -11,9 +11,17 @@ import UIKit
 final class LivesViewController: UIViewController {
   
   // MARK: - Outlets
-  @IBOutlet weak var tableView: UITableView!
+  @IBOutlet weak var collectionView: UICollectionView!
   
   // MARK: - Class properties
+  
+  private let columnLayout = ColumnFlowLayout(
+    cellsPerRow: 2,
+    height: 250,
+    minimumInteritemSpacing: 12,
+    minimumLineSpacing: 12,
+    sectionInset: UIEdgeInsets(top: 12, left: 12, bottom: 12, right: 12)
+  )
   
   // MARK: - Public properties
   
@@ -28,7 +36,7 @@ final class LivesViewController: UIViewController {
     presenter = LivesPresenter(view: self, interactor: interactor)
     
     viewConfiguration()
-    tableViewConfiguration()
+    collectionConfiguration()
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -55,12 +63,13 @@ final class LivesViewController: UIViewController {
   
   // MARK: - Class Methods
   
-  private func tableViewConfiguration() {
-    self.tableView.delegate = self
-    self.tableView.dataSource = self
-    self.tableView.allowsSelection = true
+  private func collectionConfiguration() {
+    collectionView.delegate = self
+    collectionView.dataSource = self
+    collectionView.collectionViewLayout = columnLayout
+    collectionView.contentInsetAdjustmentBehavior = .always
     
-    tableView.register(LivesTableViewCell.nib(), forCellReuseIdentifier: LivesPresenter.cellIdentifier)
+    collectionView.register(LivesCollectionViewCell.nib, forCellWithReuseIdentifier: LivesCollectionViewCell.identifier)
   }
   
   // MARK: - UIActions
@@ -69,21 +78,13 @@ final class LivesViewController: UIViewController {
 
 // MARK: - Extensions
 
-extension LivesViewController: UITableViewDataSource {
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return presenter.numberOfRowsInSection(section: section)
+extension LivesViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    return presenter.numberOfItems()
   }
   
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    return presenter.cellForRowAt(index: indexPath, tableView: tableView)
-  }
-  
-  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return presenter.heightForRowAt(index: indexPath, tableView: tableView)
-  }
-  
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    presenter.didSelectRowAt(index: indexPath)
+  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    return presenter.cell(for:collectionView, at:indexPath)
   }
 }
 
@@ -92,11 +93,11 @@ extension LivesViewController: UITableViewDelegate {
 
 extension LivesViewController: LivesViewInterface {
   func updateTableView() {
-    tableView.reloadData()
+    collectionView.reloadData()
   }
   
   func showProgress(show: Bool) {
-    tableView.isHidden = show
+    collectionView.isHidden = show
   }
 }
 

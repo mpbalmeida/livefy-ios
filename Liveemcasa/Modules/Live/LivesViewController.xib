@@ -8,7 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LivesViewController" customModule="Liveemcasa" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="DhF-Y2-HrJ" id="pCE-PB-Zl2"/>
+                <outlet property="collectionView" destination="jqM-Y9-cP2" id="gV4-Ej-hWY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,17 +17,23 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DhF-Y2-HrJ">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="jqM-Y9-cP2">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                </tableView>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="L5c-5Q-3sX">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="DhF-Y2-HrJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="9dR-IG-Hmp"/>
-                <constraint firstAttribute="trailing" secondItem="DhF-Y2-HrJ" secondAttribute="trailing" id="RPA-b4-KYn"/>
-                <constraint firstItem="DhF-Y2-HrJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="VLl-Al-IiQ"/>
-                <constraint firstAttribute="bottom" secondItem="DhF-Y2-HrJ" secondAttribute="bottom" id="aps-Xf-ep8"/>
+                <constraint firstAttribute="bottom" secondItem="jqM-Y9-cP2" secondAttribute="bottom" id="ai6-il-mT5"/>
+                <constraint firstItem="jqM-Y9-cP2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="gok-yO-g1W"/>
+                <constraint firstItem="jqM-Y9-cP2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ilO-m0-XNE"/>
+                <constraint firstAttribute="trailing" secondItem="jqM-Y9-cP2" secondAttribute="trailing" id="y20-0e-Iay"/>
             </constraints>
             <point key="canvasLocation" x="138" y="154"/>
         </view>

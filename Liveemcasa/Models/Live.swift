@@ -11,6 +11,7 @@ import Mapper
 struct Live: Mappable, Decodable {
   var id: Int = 0
   var name: String = ""
+  var date: String = ""
   var description: String = ""
   var link: String = ""
   var socialMedia: String = ""
@@ -20,6 +21,7 @@ struct Live: Mappable, Decodable {
   init(map: Mapper) throws {
     try id = map.from("id")
     try name = map.from("name")
+    try date = map.from("date")
     try description = map.from("description")
     try link = map.from("link")
     try socialMedia = map.from("socialMedia")
