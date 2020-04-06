@@ -18,27 +18,27 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cch-8X-pgh">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_app_white" translatesAutoresizingMaskIntoConstraints="NO" id="n49-0y-Bga">
-                                        <rect key="frame" x="142" y="130" width="130" height="130"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="130" id="Qg0-Va-XPB"/>
-                                            <constraint firstAttribute="height" constant="130" id="RHp-U0-iMc"/>
-                                        </constraints>
-                                    </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_launch_screen" translatesAutoresizingMaskIntoConstraints="NO" id="mip-Qe-y7L">
                                         <rect key="frame" x="8" y="806" width="398" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="iIa-0T-29Y"/>
                                         </constraints>
                                     </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_app_white" translatesAutoresizingMaskIntoConstraints="NO" id="n49-0y-Bga">
+                                        <rect key="frame" x="142" y="366" width="130" height="130"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="130" id="Nhb-VH-p8E"/>
+                                            <constraint firstAttribute="height" constant="130" id="qTE-YX-2Mb"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="n49-0y-Bga" firstAttribute="top" secondItem="cch-8X-pgh" secondAttribute="top" constant="130" id="0W7-uq-esO"/>
+                                    <constraint firstItem="n49-0y-Bga" firstAttribute="centerY" secondItem="cch-8X-pgh" secondAttribute="centerY" id="0E7-pf-jsf"/>
                                     <constraint firstAttribute="bottom" secondItem="mip-Qe-y7L" secondAttribute="bottom" constant="24" id="Cqs-om-V9x"/>
                                     <constraint firstItem="mip-Qe-y7L" firstAttribute="leading" secondItem="cch-8X-pgh" secondAttribute="leading" constant="8" id="IOn-oQ-3IC"/>
+                                    <constraint firstItem="n49-0y-Bga" firstAttribute="centerX" secondItem="cch-8X-pgh" secondAttribute="centerX" id="PWV-Re-Y5e"/>
                                     <constraint firstAttribute="trailing" secondItem="mip-Qe-y7L" secondAttribute="trailing" constant="8" id="c5g-Fb-UlT"/>
-                                    <constraint firstItem="n49-0y-Bga" firstAttribute="centerX" secondItem="cch-8X-pgh" secondAttribute="centerX" id="nsV-SE-W05"/>
                                 </constraints>
                             </view>
                         </subviews>
