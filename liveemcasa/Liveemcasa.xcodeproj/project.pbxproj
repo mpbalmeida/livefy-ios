@@ -117,7 +117,7 @@
 		51935E1D243AB7C500A3DF17 /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
 		51935E20243ABFA800A3DF17 /* OpenBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenBrowser.swift; sourceTree = "<group>"; };
 		51935E22243AC03E00A3DF17 /* LiveStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStrings.swift; sourceTree = "<group>"; };
-		51DB22DC243953D000274758 /* Liveemcasa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Liveemcasa.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		51DB22DC243953D000274758 /* Livefy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Livefy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51DB22DF243953D000274758 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51DB22E1243953D000274758 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		51DB22E8243953D100274758 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -266,7 +266,7 @@
 		51DB22DD243953D000274758 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				51DB22DC243953D000274758 /* Liveemcasa.app */,
+				51DB22DC243953D000274758 /* Livefy.app */,
 				51DB22F2243953D100274758 /* LiveemcasaTests.xctest */,
 				51DB22FD243953D100274758 /* LiveemcasaUITests.xctest */,
 			);
@@ -459,7 +459,7 @@
 			);
 			name = Liveemcasa;
 			productName = Liveemcasa;
-			productReference = 51DB22DC243953D000274758 /* Liveemcasa.app */;
+			productReference = 51DB22DC243953D000274758 /* Livefy.app */;
 			productType = "com.apple.product-type.application";
 		};
 		51DB22F1243953D100274758 /* LiveemcasaTests */ = {
@@ -838,7 +838,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.livefy;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Livefy;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -856,7 +856,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.livefy;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Livefy;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
