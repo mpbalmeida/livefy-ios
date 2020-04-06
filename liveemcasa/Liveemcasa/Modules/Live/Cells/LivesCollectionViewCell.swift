@@ -14,6 +14,7 @@ class LivesCollectionViewCell: UICollectionViewCell {
   @IBOutlet weak var viewContent: UIView!
   @IBOutlet weak var lblDate: UILabel!
   @IBOutlet weak var imgLive: UIImageView!
+  @IBOutlet weak var imgSocialMedia: UIImageView!
   
   public static let identifier: String = "LivesCollectionViewCell"
   public static let nib: UINib = UINib(nibName: "LivesCollectionViewCell", bundle: nil)
@@ -30,9 +31,21 @@ class LivesCollectionViewCell: UICollectionViewCell {
     viewContent.layer.masksToBounds = true;
     
     imgLive.sd_setImage(with: URL(string: live.bands[0].bucketFile.preSignedUrl))
+    imgSocialMedia.image = getSocialMediaImage(socialMedia: live.socialMedia)
     
     if let date = live.date.date(withFormat: "yyyy-MM-dd'T'HH:mm:ssZ") {
       lblDate.text = (date.string(withFormat: "dd/MM/yyyy HH:mm"))
+    }
+  }
+  
+  func getSocialMediaImage(socialMedia: String) -> UIImage? {
+    switch socialMedia {
+    case "INSTAGRAM":
+      return UIImage(named: "icon_instagram")
+    case "FACEBOOK":
+      return UIImage(named: "icon_facebook")
+    default:
+      return UIImage(named: "icon_youtube")
     }
   }
 

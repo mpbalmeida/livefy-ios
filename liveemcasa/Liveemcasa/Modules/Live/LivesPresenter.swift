@@ -53,6 +53,11 @@ extension LivesPresenter: LivesPresenterInterface {
     return Strings.title
   }
   
+  func callService() {
+    view?.showProgress(show: true)
+    networking.check()
+  }
+  
   func numberOfItems() -> Int {
     return  list.count
   }
@@ -67,11 +72,6 @@ extension LivesPresenter: LivesPresenterInterface {
   
   func didSelectItemAt(_ collectionView: UICollectionView, indexPath: IndexPath) {
     self.wireframe.navigate(to: .openUrlLive(urlLive: self.list[indexPath.row].link))
-  }
-  
-  func callService() {
-    view?.showProgress(show: true)
-    networking.check()
   }
 }
 
