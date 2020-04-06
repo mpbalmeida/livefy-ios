@@ -9,6 +9,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LivesViewController" customModule="Liveemcasa" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="jqM-Y9-cP2" id="gV4-Ej-hWY"/>
+                <outlet property="placeholderView" destination="9hG-8Z-XwH" id="LlW-4b-ppK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,6 +18,10 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9hG-8Z-XwH" customClass="PlaceholderView" customModule="Liveemcasa" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="jqM-Y9-cP2">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -30,10 +35,14 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="9hG-8Z-XwH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="5kA-eK-VRu"/>
+                <constraint firstAttribute="bottom" secondItem="9hG-8Z-XwH" secondAttribute="bottom" id="Fs8-as-MuO"/>
+                <constraint firstItem="9hG-8Z-XwH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Hvb-p0-9XA"/>
                 <constraint firstAttribute="bottom" secondItem="jqM-Y9-cP2" secondAttribute="bottom" id="ai6-il-mT5"/>
                 <constraint firstItem="jqM-Y9-cP2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="gok-yO-g1W"/>
                 <constraint firstItem="jqM-Y9-cP2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ilO-m0-XNE"/>
                 <constraint firstAttribute="trailing" secondItem="jqM-Y9-cP2" secondAttribute="trailing" id="y20-0e-Iay"/>
+                <constraint firstAttribute="trailing" secondItem="9hG-8Z-XwH" secondAttribute="trailing" id="zf9-pf-NJ6"/>
             </constraints>
             <point key="canvasLocation" x="138" y="154"/>
         </view>

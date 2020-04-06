@@ -22,11 +22,12 @@ protocol LivesWireframeInterface: WireframeInterface {
 protocol LivesViewInterface: ViewInterface {
   func updateTableView()
   func showProgress(show: Bool)
+  func showPlaceholderScreenError()
 }
 
 protocol LivesPresenterInterface: PresenterInterface {
   func getTitle() -> String
-  func viewConfiguration()
+  func callService()
   
   // CollectionView
   func numberOfItems() -> Int

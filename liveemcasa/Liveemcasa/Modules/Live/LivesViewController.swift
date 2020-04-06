@@ -12,6 +12,7 @@ final class LivesViewController: UIViewController {
   
   // MARK: - Outlets
   @IBOutlet weak var collectionView: UICollectionView!
+  @IBOutlet weak var placeholderView: PlaceholderView!
   
   // MARK: - Class properties
   
@@ -40,26 +41,12 @@ final class LivesViewController: UIViewController {
     collectionConfiguration()
   }
   
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    
-  }
-  
-  override func viewWillDisappear(_ animated: Bool) {
-    super.viewWillDisappear(animated)
-    
-  }
-  
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-  
   // MARK: - Class Configurations
   
   private func viewConfiguration() {
     self.title = presenter.getTitle()
-    presenter.viewConfiguration()
+    presenter.callService()
+    placeholderView.delegate = self
   }
   
   // MARK: - Class Methods
@@ -98,8 +85,21 @@ extension LivesViewController: LivesViewInterface {
   }
   
   func showProgress(show: Bool) {
+    placeholderView.isHidden = true
     collectionView.isHidden = show
     self.fullScreenLoading(hide: !show)
+  }
+  
+  func showPlaceholderScreenError() {
+    self.fullScreenLoading(hide: true)
+    collectionView.isHidden = true
+    placeholderView.isHidden = false
+  }
+}
+
+extension LivesViewController: PlaceholderViewDelegate {
+  func tryAgainIsPressed() {
+    presenter.callService()
   }
 }
 

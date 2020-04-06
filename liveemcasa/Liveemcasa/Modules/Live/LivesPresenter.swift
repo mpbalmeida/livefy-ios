@@ -43,7 +43,6 @@ final class LivesPresenter {
     view?.showProgress(show: false)
     view?.updateTableView()
   }
-  
 }
 
 // MARK: - Extensions -
@@ -52,11 +51,6 @@ extension LivesPresenter: LivesPresenterInterface {
   
   func getTitle() -> String {
     return Strings.title
-  }
-  
-  func viewConfiguration() {
-    view?.showProgress(show: true)
-    networking.check()
   }
   
   func numberOfItems() -> Int {
@@ -70,6 +64,11 @@ extension LivesPresenter: LivesPresenterInterface {
     
     return cell ?? UICollectionViewCell()
   }
+  
+  func callService() {
+    view?.showProgress(show: true)
+    networking.check()
+  }
 }
 
 extension LivesPresenter: GetLivesInteractorProtocol {
@@ -78,7 +77,7 @@ extension LivesPresenter: GetLivesInteractorProtocol {
   }
   
   func getLivesError(error: Error) {
-    
+    view?.showPlaceholderScreenError()
   }
 }
 

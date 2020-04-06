@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Medium.ttf">
+            <string>Montserrat-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlaceholderView" customModule="Liveemcasa" customModuleProvider="target">
+            <connections>
+                <outlet property="btnTryAgain" destination="803-rT-0Iu" id="V1G-4u-DbA"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="3yx-vl-tJC"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x6C-Rr-Dax">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="803-rT-0Iu">
+                            <rect key="frame" x="16" y="682" width="382" height="30"/>
+                            <state key="normal" title="Tentar novamente"/>
+                            <connections>
+                                <action selector="tryAgainClicked:" destination="-1" eventType="touchUpInside" id="vGf-wa-eeh"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onI-zk-cJC">
+                            <rect key="frame" x="16" y="48" width="382" height="39.333333333333343"/>
+                            <string key="text">Ocorreu um erro 
+ao realizar a requisição</string>
+                            <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="16"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="onI-zk-cJC" firstAttribute="top" secondItem="x6C-Rr-Dax" secondAttribute="top" constant="48" id="0zN-Cd-J6X"/>
+                        <constraint firstItem="803-rT-0Iu" firstAttribute="leading" secondItem="x6C-Rr-Dax" secondAttribute="leading" constant="16" id="38m-2I-UE7"/>
+                        <constraint firstAttribute="trailing" secondItem="onI-zk-cJC" secondAttribute="trailing" constant="16" id="8pI-OE-ocg"/>
+                        <constraint firstItem="onI-zk-cJC" firstAttribute="leading" secondItem="x6C-Rr-Dax" secondAttribute="leading" constant="16" id="sU2-my-tdh"/>
+                        <constraint firstAttribute="trailing" secondItem="803-rT-0Iu" secondAttribute="trailing" constant="16" id="tlp-fB-Pti"/>
+                        <constraint firstAttribute="bottom" secondItem="803-rT-0Iu" secondAttribute="bottom" constant="24" id="vfg-O9-E7n"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="x6C-Rr-Dax" secondAttribute="bottom" id="b99-wi-6JJ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="x6C-Rr-Dax" secondAttribute="trailing" id="hQ6-HB-dga"/>
+                <constraint firstItem="x6C-Rr-Dax" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="hgu-Ze-zPq"/>
+                <constraint firstItem="x6C-Rr-Dax" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="lLB-sr-aVe"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="139" y="151"/>
+        </view>
+    </objects>
+</document>

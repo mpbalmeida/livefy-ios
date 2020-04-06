@@ -36,6 +36,8 @@
 		51935E02243A83AF00A3DF17 /* Montserrat-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 514270A5243A7AD5000B1FCF /* Montserrat-SemiBoldItalic.ttf */; };
 		51935E03243A83AF00A3DF17 /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 514270B3243A7AD6000B1FCF /* Montserrat-Thin.ttf */; };
 		51935E04243A83AF00A3DF17 /* Montserrat-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 514270AB243A7AD6000B1FCF /* Montserrat-ThinItalic.ttf */; };
+		51935E1C243AB74600A3DF17 /* PlaceholderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51935E1B243AB74600A3DF17 /* PlaceholderView.xib */; };
+		51935E1E243AB7C500A3DF17 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51935E1D243AB7C500A3DF17 /* PlaceholderView.swift */; };
 		51DB22E0243953D000274758 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DB22DF243953D000274758 /* AppDelegate.swift */; };
 		51DB22E2243953D000274758 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DB22E1243953D000274758 /* SceneDelegate.swift */; };
 		51DB22E9243953D100274758 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51DB22E8243953D100274758 /* Assets.xcassets */; };
@@ -109,6 +111,8 @@
 		514270B2243A7AD6000B1FCF /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-SemiBold.ttf"; path = "../../../../../../bs2-app-ios/MobileBanking/Resources/Fonts/Montserrat/Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		514270B3243A7AD6000B1FCF /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Thin.ttf"; path = "../../../../../../bs2-app-ios/MobileBanking/Resources/Fonts/Montserrat/Montserrat-Thin.ttf"; sourceTree = "<group>"; };
 		514270B5243A7B04000B1FCF /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		51935E1B243AB74600A3DF17 /* PlaceholderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceholderView.xib; sourceTree = "<group>"; };
+		51935E1D243AB7C500A3DF17 /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
 		51DB22DC243953D000274758 /* Liveemcasa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Liveemcasa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51DB22DF243953D000274758 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51DB22E1243953D000274758 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -172,6 +176,7 @@
 		51427091243A5CC1000B1FCF /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				51935E09243AABC300A3DF17 /* PlaceholderScreenError */,
 				512A2426243A49980058F6E9 /* ColumnFlowLayout.swift */,
 				51427092243A5CD9000B1FCF /* ShadowView.swift */,
 			);
@@ -220,6 +225,15 @@
 				514270AB243A7AD6000B1FCF /* Montserrat-ThinItalic.ttf */,
 			);
 			path = Monteserrat;
+			sourceTree = "<group>";
+		};
+		51935E09243AABC300A3DF17 /* PlaceholderScreenError */ = {
+			isa = PBXGroup;
+			children = (
+				51935E1B243AB74600A3DF17 /* PlaceholderView.xib */,
+				51935E1D243AB7C500A3DF17 /* PlaceholderView.swift */,
+			);
+			path = PlaceholderScreenError;
 			sourceTree = "<group>";
 		};
 		51DB22D3243953D000274758 = {
@@ -535,6 +549,7 @@
 				51DB232C24395AAD00274758 /* LivesViewController.xib in Resources */,
 				51935DF8243A83AF00A3DF17 /* Montserrat-ExtraBoldItalic.ttf in Resources */,
 				51935E04243A83AF00A3DF17 /* Montserrat-ThinItalic.ttf in Resources */,
+				51935E1C243AB74600A3DF17 /* PlaceholderView.xib in Resources */,
 				51935DF7243A83AF00A3DF17 /* Montserrat-ExtraBold.ttf in Resources */,
 				51935DFB243A83AF00A3DF17 /* Montserrat-Italic.ttf in Resources */,
 				51935DFE243A83AF00A3DF17 /* Montserrat-Medium.ttf in Resources */,
@@ -614,6 +629,7 @@
 				51DB2333243965B600274758 /* CustomErrors.swift in Sources */,
 				51DB232924395AAD00274758 /* LivesPresenter.swift in Sources */,
 				51DB231D2439555200274758 /* InteractorInterface.swift in Sources */,
+				51935E1E243AB7C500A3DF17 /* PlaceholderView.swift in Sources */,
 				51DB231B2439553800274758 /* PresenterInterface.swift in Sources */,
 				51DB22E0243953D000274758 /* AppDelegate.swift in Sources */,
 				51DB232A24395AAD00274758 /* LivesViewController.swift in Sources */,
