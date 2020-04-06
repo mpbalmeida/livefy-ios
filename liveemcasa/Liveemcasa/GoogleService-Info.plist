@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>38255693663-mgi6s578hdtnmg2lc83vsfhi75nkmva6.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.38255693663-mgi6s578hdtnmg2lc83vsfhi75nkmva6</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBFWhXYnNW9xzyp6mmfNymAPZoMpVD1wds</string>
+	<key>GCM_SENDER_ID</key>
+	<string>38255693663</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>dev.livefy</string>
+	<key>PROJECT_ID</key>
+	<string>livefy-e0382</string>
+	<key>STORAGE_BUCKET</key>
+	<string>livefy-e0382.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:38255693663:ios:c9ed16b931cdd4e62a70ea</string>
+	<key>DATABASE_URL</key>
+	<string>https://livefy-e0382.firebaseio.com</string>
+</dict>
+</plist>
