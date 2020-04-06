@@ -65,6 +65,10 @@ extension LivesPresenter: LivesPresenterInterface {
     return cell ?? UICollectionViewCell()
   }
   
+  func didSelectItemAt(_ collectionView: UICollectionView, indexPath: IndexPath) {
+    self.wireframe.navigate(to: .openUrlLive(urlLive: self.list[indexPath.row].link))
+  }
+  
   func callService() {
     view?.showProgress(show: true)
     networking.check()

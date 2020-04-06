@@ -35,6 +35,7 @@ final class LivesViewController: UIViewController {
     
     let interactor = LivesInteractor()
     let livesWireframe = LivesWireframe(navigationController: self.navigationController!)
+    livesWireframe.configureModule(with: self)
     presenter = LivesPresenter(view: self, interactor: interactor, wireframe: livesWireframe)
     
     viewConfiguration()
@@ -74,9 +75,10 @@ extension LivesViewController: UICollectionViewDelegate, UICollectionViewDataSou
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     return presenter.cell(for:collectionView, at:indexPath)
   }
-}
-
-extension LivesViewController: UITableViewDelegate {
+  
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    presenter.didSelectItemAt(collectionView, indexPath: indexPath)
+  }
 }
 
 extension LivesViewController: LivesViewInterface {

@@ -13,6 +13,7 @@ enum LivesNavigationOption {
   case showConnectionErrorAlert
   case showErrorAlert
   case goToDetails
+  case openUrlLive(urlLive: String)
 }
 
 protocol LivesWireframeInterface: WireframeInterface {
@@ -32,6 +33,7 @@ protocol LivesPresenterInterface: PresenterInterface {
   // CollectionView
   func numberOfItems() -> Int
   func cell(for collectionView: UICollectionView, at index: IndexPath) -> UICollectionViewCell
+  func didSelectItemAt(_ collectionView: UICollectionView, indexPath: IndexPath)
   
 }
 

@@ -38,6 +38,8 @@
 		51935E04243A83AF00A3DF17 /* Montserrat-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 514270AB243A7AD6000B1FCF /* Montserrat-ThinItalic.ttf */; };
 		51935E1C243AB74600A3DF17 /* PlaceholderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51935E1B243AB74600A3DF17 /* PlaceholderView.xib */; };
 		51935E1E243AB7C500A3DF17 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51935E1D243AB7C500A3DF17 /* PlaceholderView.swift */; };
+		51935E21243ABFA800A3DF17 /* OpenBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51935E20243ABFA800A3DF17 /* OpenBrowser.swift */; };
+		51935E23243AC03E00A3DF17 /* LiveStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51935E22243AC03E00A3DF17 /* LiveStrings.swift */; };
 		51DB22E0243953D000274758 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DB22DF243953D000274758 /* AppDelegate.swift */; };
 		51DB22E2243953D000274758 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DB22E1243953D000274758 /* SceneDelegate.swift */; };
 		51DB22E9243953D100274758 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51DB22E8243953D100274758 /* Assets.xcassets */; };
@@ -113,6 +115,8 @@
 		514270B5243A7B04000B1FCF /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		51935E1B243AB74600A3DF17 /* PlaceholderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceholderView.xib; sourceTree = "<group>"; };
 		51935E1D243AB7C500A3DF17 /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
+		51935E20243ABFA800A3DF17 /* OpenBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenBrowser.swift; sourceTree = "<group>"; };
+		51935E22243AC03E00A3DF17 /* LiveStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStrings.swift; sourceTree = "<group>"; };
 		51DB22DC243953D000274758 /* Liveemcasa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Liveemcasa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51DB22DF243953D000274758 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51DB22E1243953D000274758 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -236,6 +240,17 @@
 			path = PlaceholderScreenError;
 			sourceTree = "<group>";
 		};
+		51935E1F243ABF7800A3DF17 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				51DB2341243A1C5A00274758 /* TypeName.swift */,
+				51DB2334243965FB00274758 /* Constants.swift */,
+				51935E20243ABFA800A3DF17 /* OpenBrowser.swift */,
+				51935E22243AC03E00A3DF17 /* LiveStrings.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		51DB22D3243953D000274758 = {
 			isa = PBXGroup;
 			children = (
@@ -312,10 +327,10 @@
 		51DB23112439549600274758 /* Commom */ = {
 			isa = PBXGroup;
 			children = (
+				51935E1F243ABF7800A3DF17 /* Utils */,
 				51427091243A5CC1000B1FCF /* Components */,
 				51DB233E243A1BF900274758 /* Extensions */,
 				51DB2315243954EE00274758 /* VIPER */,
-				51DB2334243965FB00274758 /* Constants.swift */,
 			);
 			path = Commom;
 			sourceTree = "<group>";
@@ -402,7 +417,6 @@
 			isa = PBXGroup;
 			children = (
 				51DB233F243A1C0D00274758 /* UIView.swift */,
-				51DB2341243A1C5A00274758 /* TypeName.swift */,
 				512A2428243A52710058F6E9 /* String.swift */,
 				512A242A243A533D0058F6E9 /* Date.swift */,
 			);
@@ -639,8 +653,10 @@
 				514270B6243A7B04000B1FCF /* Fonts.swift in Sources */,
 				51427093243A5CD9000B1FCF /* ShadowView.swift in Sources */,
 				51DB23212439585400274758 /* Band.swift in Sources */,
+				51935E21243ABFA800A3DF17 /* OpenBrowser.swift in Sources */,
 				512A2429243A52710058F6E9 /* String.swift in Sources */,
 				51DB2342243A1C5A00274758 /* TypeName.swift in Sources */,
+				51935E23243AC03E00A3DF17 /* LiveStrings.swift in Sources */,
 				51DB232824395AAD00274758 /* LivesInterfaces.swift in Sources */,
 				51427098243A6D9D000B1FCF /* NetworkReachabilityManager.swift in Sources */,
 				51DB2340243A1C0D00274758 /* UIView.swift in Sources */,

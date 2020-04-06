@@ -12,10 +12,11 @@ import UIKit
 final class LivesWireframe: BaseWireframe {
   
   // MARK: - Private properties -
-  //private let moduleViewController = LivesViewController(nibName: nil, bundle: nil)
+  private var moduleViewController = LivesViewController(nibName: nil, bundle: nil)
   // MARK: - Module setup -
   
   func configureModule(with viewController: LivesViewController) {
+    moduleViewController = viewController
     
     /*let interactor = LivesInteractor()
     let presenter = LivesPresenter(view: viewController, interactor: interactor)
@@ -41,6 +42,13 @@ final class LivesWireframe: BaseWireframe {
   private func goToDetails() {
     
   }
+  
+  private func openUrlLive(urlLive: String) {
+    OpenBrowser.sharedInstance.openBrowser(viewController: self.moduleViewController,
+                                           title: LiveStrings.titleActionSheets,
+                                           message: "",
+                                           url: urlLive)
+  }
 }
 
 // MARK: - Extensions -
@@ -55,7 +63,9 @@ extension LivesWireframe: LivesWireframeInterface {
       self.showErrorAlert()
     case .goToDetails:
       self.goToDetails()
-    }
+    case .openUrlLive(let urlLive):
+      self.openUrlLive(urlLive: urlLive)
+     }
   }
 }
 
