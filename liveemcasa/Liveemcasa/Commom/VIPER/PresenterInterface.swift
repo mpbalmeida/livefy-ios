@@ -13,5 +13,12 @@ protocol PresenterInterface: class {
 }
 
 extension PresenterInterface {
+  
+  var networking: NetworkingInteractor {
+    let interactor = NetworkingInteractor()
+    interactor.response = self as? NetworkingInteractorResponse
+    interactor.listener = self as? NetworkingListenerResponse
+    return interactor
+  }
 
 }

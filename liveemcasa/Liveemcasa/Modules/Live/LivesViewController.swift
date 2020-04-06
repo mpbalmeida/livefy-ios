@@ -33,7 +33,8 @@ final class LivesViewController: UIViewController {
     super.viewDidLoad()
     
     let interactor = LivesInteractor()
-    presenter = LivesPresenter(view: self, interactor: interactor)
+    let livesWireframe = LivesWireframe(navigationController: self.navigationController!)
+    presenter = LivesPresenter(view: self, interactor: interactor, wireframe: livesWireframe)
     
     viewConfiguration()
     collectionConfiguration()
@@ -98,6 +99,7 @@ extension LivesViewController: LivesViewInterface {
   
   func showProgress(show: Bool) {
     collectionView.isHidden = show
+    self.fullScreenLoading(hide: !show)
   }
 }
 

@@ -16,6 +16,7 @@ final class LivesPresenter {
   
   private weak var view: LivesViewInterface?
   private let interactor: LivesInteractor
+  private let wireframe: LivesWireframe!
   
   private var list = [Live]()
   static let cellIdentifier = "LivesCollectionViewCell"
@@ -27,9 +28,11 @@ final class LivesPresenter {
   // MARK: - Lifecycle -
   
   init(view: LivesViewInterface,
-       interactor: LivesInteractor) {
+       interactor: LivesInteractor,
+       wireframe: LivesWireframe) {
     self.view = view
     self.interactor = interactor
+    self.wireframe = wireframe
     
     self.interactor.response = self
   }
@@ -53,7 +56,7 @@ extension LivesPresenter: LivesPresenterInterface {
   
   func viewConfiguration() {
     view?.showProgress(show: true)
-    self.interactor.getLives()
+    networking.check()
   }
   
   func numberOfItems() -> Int {
@@ -76,6 +79,16 @@ extension LivesPresenter: GetLivesInteractorProtocol {
   
   func getLivesError(error: Error) {
     
+  }
+}
+
+extension LivesPresenter: NetworkingInteractorResponse {
+  func networkingAvailable() {
+    self.interactor.getLives()
+  }
+
+  func networkingNotAvailable() {
+    self.wireframe.navigate(to: .showConnectionErrorAlert)
   }
 }
 

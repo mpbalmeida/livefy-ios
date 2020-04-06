@@ -10,6 +10,9 @@
 import UIKit
 
 enum LivesNavigationOption {
+  case showConnectionErrorAlert
+  case showErrorAlert
+  case goToDetails
 }
 
 protocol LivesWireframeInterface: WireframeInterface {

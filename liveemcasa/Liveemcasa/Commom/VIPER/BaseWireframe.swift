@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+typealias AlertAction = (String?) -> Void
+
 enum Transition {
   case root
   case push

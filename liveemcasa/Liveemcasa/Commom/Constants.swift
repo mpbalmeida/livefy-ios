@@ -23,6 +23,7 @@ enum Constants {
     static let tryAgain = "Tentar Novamente"
     static let back = "Voltar"
     static let select = "Selecionar"
+    static let close = "Fechar"
   }
 
 }

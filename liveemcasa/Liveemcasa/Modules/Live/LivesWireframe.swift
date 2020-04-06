@@ -30,7 +30,17 @@ final class LivesWireframe: BaseWireframe {
   }
   
   // MARK: - Private Routing -
+  
+  private func showConnectionErrorAlert() {
+  }
 
+  private func showErrorAlert() {
+    
+  }
+  
+  private func goToDetails() {
+    
+  }
 }
 
 // MARK: - Extensions -
@@ -38,7 +48,14 @@ final class LivesWireframe: BaseWireframe {
 extension LivesWireframe: LivesWireframeInterface {
   
   func navigate(to option: LivesNavigationOption) {
-
+    switch option {
+    case .showConnectionErrorAlert:
+      self.showConnectionErrorAlert()
+    case .showErrorAlert:
+      self.showErrorAlert()
+    case .goToDetails:
+      self.goToDetails()
+    }
   }
 }
 
