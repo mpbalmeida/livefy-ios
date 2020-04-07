@@ -31,30 +31,26 @@ class OpenBrowser {
                                   message: message,
                                   preferredStyle: .actionSheet)
     
-    let safariURL = URL(string: url) //URL(string: String(format: "https://%@", url))
-    /* let chromeURL = URL(string: String(format: "googlechrome://%@", url))
-    let operaURL  = URL(string: String(format: "opera-http://%@", url)) */
+    let safariURL = URL(string: url)
+    let youtubeURL = URL(string: String(format: "youtube://%@", url))
     
     let safariAction = UIAlertAction(title: "Safari", style: .default) { (_) in
       UIApplication.shared.open(safariURL!, options: [:], completionHandler: nil)
     }
-    /* let googleChromeAction = UIAlertAction(title: "Google Chrome", style: .default) { (_) in
-      UIApplication.shared.open(chromeURL!, options: [:], completionHandler: nil)
+    
+    let youtubeAction = UIAlertAction(title: "Youtube", style: .default) { (_) in
+      UIApplication.shared.open(youtubeURL!, options: [:], completionHandler: nil)
     }
-    let operaAction = UIAlertAction(title: "Opera", style: .default) { (_) in
-      UIApplication.shared.open(operaURL!, options: [:], completionHandler: nil)
-    } */
+    
     let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel) { (_) in }
     
     if sharedApplication.canOpenURL(safariURL!) {
       alert.addAction(safariAction)
     }
-    /*if sharedApplication.canOpenURL(chromeURL!) {
-      alert.addAction(googleChromeAction)
+    
+    if url.contains("youtube") && sharedApplication.canOpenURL(youtubeURL!) {
+      alert.addAction(youtubeAction)
     }
-    if sharedApplication.canOpenURL(operaURL!) {
-      alert.addAction(operaAction)
-    } */
 
     alert.addAction(cancelAction)
     
