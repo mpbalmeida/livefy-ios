@@ -32,7 +32,8 @@ class OpenBrowser {
                                   preferredStyle: .actionSheet)
     
     let safariURL = URL(string: url)
-    let youtubeURL = URL(string: String(format: "youtube://%@", url))
+    let newUrl = url.replace(occurences: ["https", "http"], with: "youtube")
+    let youtubeURL = URL(string: newUrl)
     
     let safariAction = UIAlertAction(title: "Safari", style: .default) { (_) in
       UIApplication.shared.open(safariURL!, options: [:], completionHandler: nil)
