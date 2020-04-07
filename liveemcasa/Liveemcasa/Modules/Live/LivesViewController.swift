@@ -59,6 +59,7 @@ final class LivesViewController: UIViewController {
     collectionView.contentInsetAdjustmentBehavior = .always
     
     let refreshControl = UIRefreshControl()
+    refreshControl.tintColor = UIColor.darkGray
     refreshControl.addTarget(self, action: #selector(refreshList), for: .valueChanged)
     collectionView.refreshControl = refreshControl
     
