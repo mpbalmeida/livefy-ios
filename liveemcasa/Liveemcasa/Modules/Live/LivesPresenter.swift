@@ -49,8 +49,12 @@ final class LivesPresenter {
 
 extension LivesPresenter: LivesPresenterInterface {
   
-  func getTitle() -> String {
-    return Strings.title
+  func getTitle() -> UIImageView {
+    let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 38, height: 38))
+    imageView.contentMode = .scaleAspectFit
+    let image = UIImage(named: "icon_app_white")
+    imageView.image = image
+    return imageView
   }
   
   func callService() {

@@ -45,7 +45,7 @@ final class LivesViewController: UIViewController {
   // MARK: - Class Configurations
   
   private func viewConfiguration() {
-    self.title = presenter.getTitle()
+    self.navigationItem.titleView = presenter.getTitle()
     presenter.callService()
     placeholderView.delegate = self
   }

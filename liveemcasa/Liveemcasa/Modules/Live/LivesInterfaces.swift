@@ -27,7 +27,7 @@ protocol LivesViewInterface: ViewInterface {
 }
 
 protocol LivesPresenterInterface: PresenterInterface {
-  func getTitle() -> String
+  func getTitle() -> UIImageView
   func callService()
   
   // CollectionView
