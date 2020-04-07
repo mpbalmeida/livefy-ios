@@ -52,7 +52,7 @@ extension LivesPresenter: LivesPresenterInterface {
   func getTitle() -> UIImageView {
     let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 38, height: 38))
     imageView.contentMode = .scaleAspectFit
-    let image = UIImage(named: "icon_app_white")
+    let image = UIImage(named: "icon_app_transparent")
     imageView.image = image
     return imageView
   }
