@@ -57,8 +57,11 @@ extension LivesPresenter: LivesPresenterInterface {
     return imageView
   }
   
-  func callService() {
-    view?.showProgress(show: true)
+  func callService(showProgress: Bool) {
+    if showProgress {
+      view?.showProgress(show: true)
+    }
+    
     networking.check()
   }
   

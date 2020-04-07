@@ -28,7 +28,7 @@ protocol LivesViewInterface: ViewInterface {
 
 protocol LivesPresenterInterface: PresenterInterface {
   func getTitle() -> UIImageView
-  func callService()
+  func callService(showProgress: Bool)
   
   // CollectionView
   func numberOfItems() -> Int

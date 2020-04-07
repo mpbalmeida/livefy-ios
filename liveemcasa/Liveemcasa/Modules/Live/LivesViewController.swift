@@ -46,7 +46,7 @@ final class LivesViewController: UIViewController {
   
   private func viewConfiguration() {
     self.navigationItem.titleView = presenter.getTitle()
-    presenter.callService()
+    presenter.callService(showProgress: true)
     placeholderView.delegate = self
   }
   
@@ -58,7 +58,16 @@ final class LivesViewController: UIViewController {
     collectionView.collectionViewLayout = columnLayout
     collectionView.contentInsetAdjustmentBehavior = .always
     
+    let refreshControl = UIRefreshControl()
+    refreshControl.addTarget(self, action: #selector(refreshList), for: .valueChanged)
+    collectionView.refreshControl = refreshControl
+    
     collectionView.register(LivesCollectionViewCell.nib, forCellWithReuseIdentifier: LivesCollectionViewCell.identifier)
+  }
+  
+  @objc func refreshList(refreshControl: UIRefreshControl) {
+    presenter.callService(showProgress: false)
+    refreshControl.endRefreshing()
   }
   
   // MARK: - UIActions
@@ -101,7 +110,7 @@ extension LivesViewController: LivesViewInterface {
 
 extension LivesViewController: PlaceholderViewDelegate {
   func tryAgainIsPressed() {
-    presenter.callService()
+    presenter.callService(showProgress: true)
   }
 }
 

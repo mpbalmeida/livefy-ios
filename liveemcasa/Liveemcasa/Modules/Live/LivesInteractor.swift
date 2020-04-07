@@ -34,7 +34,7 @@ final class LivesInteractor {
         do {
           let filteredResponse = try response.filterSuccessfulStatusCodes()
           let lives = try filteredResponse.map(LiveResponse.self)
-          print(lives)
+          print(try response.mapJSON())
           self.response?.getLivesSuccess(success: lives.lives)
         } catch {
           print(error.localizedDescription)
