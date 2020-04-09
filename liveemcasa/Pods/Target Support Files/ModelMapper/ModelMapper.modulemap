@@ -1,4 +1,4 @@
-module Mapper {
+framework module Mapper {
   umbrella header "ModelMapper-umbrella.h"
 
   export *
