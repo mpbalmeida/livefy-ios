@@ -835,15 +835,17 @@
 			baseConfigurationReference = 6A452B5CE2AB620B8FBCFBE5 /* Pods-Liveemcasa.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = N3LZ7D966X;
 				INFOPLIST_FILE = Liveemcasa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dev.livefy;
+				PRODUCT_BUNDLE_IDENTIFIER = app.livefy;
 				PRODUCT_NAME = Livefy;
+				PROVISIONING_PROFILE_SPECIFIER = LivefyAppStoreDistribution;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -854,15 +856,17 @@
 			baseConfigurationReference = AC1BE57DFFE3C09DC6509A06 /* Pods-Liveemcasa.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = N3LZ7D966X;
 				INFOPLIST_FILE = Liveemcasa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dev.livefy;
+				PRODUCT_BUNDLE_IDENTIFIER = app.livefy;
 				PRODUCT_NAME = Livefy;
+				PROVISIONING_PROFILE_SPECIFIER = LivefyAppStoreDistribution;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
