@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		325DDE17D27AEA7833BF952B /* Pods_Liveemcasa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3709ED7BC91D634AC9242789 /* Pods_Liveemcasa.framework */; };
+		323AC63A392C6B9D41015AF5 /* libPods-Liveemcasa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 881E42A8C4085011BFEF1D2C /* libPods-Liveemcasa.a */; };
 		51076D88243CE65000523979 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51076D76243CE64F00523979 /* Montserrat-SemiBold.ttf */; };
 		51076D89243CE65000523979 /* Montserrat-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51076D77243CE64F00523979 /* Montserrat-ThinItalic.ttf */; };
 		51076D8A243CE65000523979 /* Montserrat-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51076D78243CE64F00523979 /* Montserrat-MediumItalic.ttf */; };
@@ -85,7 +85,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3709ED7BC91D634AC9242789 /* Pods_Liveemcasa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Liveemcasa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51076D76243CE64F00523979 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		51076D77243CE64F00523979 /* Montserrat-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ThinItalic.ttf"; sourceTree = "<group>"; };
 		51076D78243CE64F00523979 /* Montserrat-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-MediumItalic.ttf"; sourceTree = "<group>"; };
@@ -150,6 +149,7 @@
 		51DB233F243A1C0D00274758 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		51DB2341243A1C5A00274758 /* TypeName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeName.swift; sourceTree = "<group>"; };
 		6A452B5CE2AB620B8FBCFBE5 /* Pods-Liveemcasa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Liveemcasa.debug.xcconfig"; path = "Target Support Files/Pods-Liveemcasa/Pods-Liveemcasa.debug.xcconfig"; sourceTree = "<group>"; };
+		881E42A8C4085011BFEF1D2C /* libPods-Liveemcasa.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Liveemcasa.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1BE57DFFE3C09DC6509A06 /* Pods-Liveemcasa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Liveemcasa.release.xcconfig"; path = "Target Support Files/Pods-Liveemcasa/Pods-Liveemcasa.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,7 +158,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				325DDE17D27AEA7833BF952B /* Pods_Liveemcasa.framework in Frameworks */,
+				323AC63A392C6B9D41015AF5 /* libPods-Liveemcasa.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,7 +438,7 @@
 		B6CD2E29B6C6A677B37117D6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3709ED7BC91D634AC9242789 /* Pods_Liveemcasa.framework */,
+				881E42A8C4085011BFEF1D2C /* libPods-Liveemcasa.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -454,7 +454,6 @@
 				51DB22D8243953D000274758 /* Sources */,
 				51DB22D9243953D000274758 /* Frameworks */,
 				51DB22DA243953D000274758 /* Resources */,
-				858F200CD8D65071B66EC9F3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -613,23 +612,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		858F200CD8D65071B66EC9F3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Liveemcasa/Pods-Liveemcasa-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Liveemcasa/Pods-Liveemcasa-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Liveemcasa/Pods-Liveemcasa-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

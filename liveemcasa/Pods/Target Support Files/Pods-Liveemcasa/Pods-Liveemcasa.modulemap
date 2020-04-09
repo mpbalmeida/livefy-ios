@@ -1,4 +1,4 @@
-framework module Pods_Liveemcasa {
+module Pods_Liveemcasa {
   umbrella header "Pods-Liveemcasa-umbrella.h"
 
   export *

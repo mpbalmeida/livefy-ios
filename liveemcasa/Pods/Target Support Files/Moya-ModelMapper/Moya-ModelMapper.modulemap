@@ -1,4 +1,4 @@
-framework module Moya_ModelMapper {
+module Moya_ModelMapper {
   umbrella header "Moya-ModelMapper-umbrella.h"
 
   export *
